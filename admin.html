@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technova Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            background: #f5f5f5;
+        }
+        .sidebar {
+            width: 250px;
+            background: #00C36E;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar h2 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            margin: 10px 0;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background: #008c50;
+            border-radius: 5px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header h3{
+            
+        }
+        .logout-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .logout-btn:hover {
+            background: darkred;
+        }
+        .dashboard {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            background: #00C36E;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card i {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Technova</h2>
+        <a href="#"><i class="fa fa-tasks"></i> Project Overview</a>
+        <a href="#"><i class="fa fa-users"></i> Team Members</a>
+        <a href="#"><i class="fa fa-cogs"></i> System Management</a>
+        <a href="#"><i class="fa fa-chart-line"></i> Reports & Analytics</a>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h3>Welcome, Ethan Marcus (Senior Developer)</h3>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+        <div class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="card">
+                <div>
+                    <h3>Active Projects</h3>
+                    <p>5 ongoing projects</p>
+                </div>
+                <i class="fa fa-folder"></i>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Team Performance</h3>
+                    <p>75% completion rate</p>
+                </div>
+                <i class="fa fa-chart-bar"></i>
+            </div>
+            <div class="card">
+                <div>
+                    <h3>Pending Tasks</h3>
+                    <p>12 tasks remaining</p>
+                </div>
+                <i class="fa fa-tasks"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
