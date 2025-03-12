@@ -100,11 +100,11 @@
     <div class="login-container">
         <div class="logo">Pheonix</div>
         <div class="input-box">
-            <input type="text" id="username" placeholder="Username">
+            <input type="text" id="whoami" placeholder="Username">
             <i class="fa fa-user"></i>
         </div>
         <div class="input-box">
-            <input type="password" id="password" placeholder="Password">
+            <input type="password" id="whydoyouwantit" placeholder="Password">
             <i class="fa fa-lock"></i>
         </div>
         <button class="login-btn" onclick="validateLogin()">Login</button>
@@ -128,12 +128,12 @@
         }
 
         async function validateLogin() {
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
+            const username = document.getElementById("whoami").value;
+            const password = document.getElementById("whydoyouwantit").value;
             const errorMessage = document.getElementById("error-message");
 
             const storedUsername = "admin";
-            const storedPasswordHash = "7262a084aa135f478cc274536ae53d9df39f441828a0864226c52849abe81bf0";
+            const storedPasswordHash = "1c16f83ee8d23b64102bb77f335c4eff29cd360110e5e30a41a80e18ed8d6cbd";
 
             if (username === storedUsername) {
                 const hashedInputPassword = await hashPassword(password);
