@@ -103,6 +103,77 @@
     color: var(--bs-white);
 }
 
+/* General Styling */
+.award-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e8f5e9; /* Light green background */
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Header */
+.card-header h2 {
+    font-size: 20px;
+    color: #2e7d32; /* Dark Green */
+    margin-bottom: 10px;
+}
+
+/* Card Body */
+.card-body h3 {
+    font-size: 24px;
+    color: #1b5e20; /* Darker Green */
+    margin-bottom: 5px;
+}
+
+.card-body p {
+    font-size: 16px;
+    color: #4caf50; /* Medium Green */
+}
+
+/* Card Footer */
+.card-footer {
+    margin-top: 15px;
+}
+
+.congrats-btn {
+    background: #4caf50; /* Green */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.crop {
+    border-radius:50%;
+}
+
+/* Button Hover */
+.congrats-btn:hover {
+    background: #388e3c; /* Darker Green */
+    transform: scale(1.1);
+}
+
+
 .topbar .dropdown .dropdown-menu {
     transform: rotateX(0deg);
     visibility: visible;
