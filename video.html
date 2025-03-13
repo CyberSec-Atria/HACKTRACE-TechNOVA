@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video</title>
+    <style>
+        body {
+            background: black;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+        }
+        #hidden-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 50px;
+            background: black; /* Blends with background */
+            border: none;
+            cursor: pointer;
+        }
+        #hidden-button :hover {
+            color:red;
+        }
+        video {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="hidden-button">HACK TRACE</button> <!-- Hidden button -->
+    <video id="intro-video" autoplay playsinline></video>
+
+    <script>
+        let button = document.getElementById("hidden-button");
+        let video = document.getElementById("intro-video");
+
+        button.addEventListener("click", function() {
+            button.style.display = "none"; // Hide button after clicking
+            video.style.display = "block"; // Show video
+
+            // Set video source
+            video.src = "mvp.mp4";  // Change to your actual video file path
+            video.load();// Force fullscreen
+            video.play();
+
+            video.onended = function() {
+                document.exitFullscreen(); // Exit fullscreen after video ends
+                window.location.href = "admin.html"; // Redirect to admin panel
+            };
+        });
+    </script>
+
+</body>
+</html>
