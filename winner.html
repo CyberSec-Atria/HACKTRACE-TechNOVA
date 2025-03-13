@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackTrace MVP - Victory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background: black;
+            color: #0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .glitch {
+            font-size: 3rem;
+            font-weight: 700;
+            position: relative;
+            animation: glitch-animation 1s infinite alternate;
+            text-transform: uppercase;
+        }
+
+        @keyframes glitch-animation {
+            0% { text-shadow: 2px 2px red, -2px -2px blue; }
+            100% { text-shadow: -2px -2px red, 2px 2px blue; }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border: 2px solid #0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0f0;
+            margin-top: 20px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .victory {
+            font-size: 2rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #fff;
+            opacity: 0.7;
+        }
+
+        .hack-effect {
+            width: 100%;
+            height: 100vh;
+            background: url('https://www.icegif.com/wp-content/uploads/2022/01/icegif-179.gif') center/cover no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.2;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hack-effect"></div>
+
+    <div class="glitch">HACKTRACE</div>
+    <div class="container">
+        <div class="victory">MISSION COMPLETE</div>
+        <br>
+        <p>Congratulations! You have successfully conquered the OSINT Challenge.</p>
+        <p>Your skills in cybersecurity, intelligence gathering, and ethical hacking have been proven.</p>
+        <br>
+        <p>Welcome to the elite.</p>
+    </div>
+
+    <div class="footer">ATRIA Institute of Technology | CyberSec Club</div>
+
+</body>
+</html>
