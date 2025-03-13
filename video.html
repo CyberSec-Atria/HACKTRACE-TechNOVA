@@ -15,19 +15,43 @@
             overflow: hidden;
             margin: 0;
         }
+
         #hidden-button {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 100px;
+            transform: translate(-50%, -50%);
+            width: 120px;
             height: 50px;
-            background: black; /* Blends with background */
-            border: none;
+            background: black;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            border: 1px solid rgb(0, 0, 0);
             cursor: pointer;
+            transition: 0.3s;
         }
-        #hidden-button :hover {
-            color:red;
+
+        #hidden-button:hover {
+            color: red;
+            border-color: red;
         }
+
+        #loading {
+            display: none;
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-top: 6px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         video {
             display: none;
             width: 100vw;
@@ -38,21 +62,28 @@
 </head>
 <body>
 
-    <button id="hidden-button">HACK TRACE</button> <!-- Hidden button -->
-    <video id="intro-video" autoplay playsinline></video>
+    <button id="hidden-button">HACK TRACE</button>
+    <div id="loading"></div>
+    <video id="intro-video" playsinline></video>
 
     <script>
         let button = document.getElementById("hidden-button");
         let video = document.getElementById("intro-video");
+        let loading = document.getElementById("loading");
 
         button.addEventListener("click", function() {
-            button.style.display = "none"; // Hide button after clicking
-            video.style.display = "block"; // Show video
+            button.style.display = "none"; // Hide button
+            loading.style.display = "block"; // Show loader
 
             // Set video source
             video.src = "mvp.mp4";  // Change to your actual video file path
-            video.load();// Force fullscreen
-            video.play();
+            video.load();
+
+            video.oncanplaythrough = function() {
+                loading.style.display = "none"; // Hide loader
+                video.style.display = "block"; // Show video
+                video.play();
+            };
 
             video.onended = function() {
                 document.exitFullscreen(); // Exit fullscreen after video ends
