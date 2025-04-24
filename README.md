@@ -62,8 +62,5 @@ The event revealed key insights and reactions from participants:
 - **Priyanka Chavan (ISE B)**  
   [github.com/Atriapriya](https://github.com/Atriapriya/)  
 
-- **Shivam Malge (CSDS)**  
-  [github.com/ShivamMalge](https://github.com/ShivamMalge/)  
-
 - **Siddharth B N (CSDS)**  
   [github.com/Siddhubn](https://github.com/Siddhubn/)
